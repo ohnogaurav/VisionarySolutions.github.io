@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Visionary Solutions</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2; /* Light gray background */
+            color: #333; /* Dark gray text color */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #fff; /* White background */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+            color: rgb(218, 32, 32); /* Reddish color */
+        }
+
+        /* About Container Styles */
+        .about-container {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center;
+            background: url('aboutus.jpg') center/cover no-repeat; /* Set image as background */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        .text-container {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .image-container {
+            padding: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .text-container h1 {
+            font-size: 36px;
+            color: rgb(218, 32, 32); /* Reddish color */
+            margin-bottom: 20px;
+        }
+
+        .text-container p {
+            font-size: 18px;
+            color: #333; /* Dark gray text color */
+            margin-bottom: 30px;
+        }
+
+        .read-more-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgb(218, 32, 32); /* Reddish color */
+            color: #fff; /* White text color */
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .read-more-link:hover {
+            background-color: #333; /* Dark gray button color */
+        }
+
+        /* Expanded Content Styles */
+        .expanded-content {
+            display: none;
+            padding: 20px 0;
+        }
+
+        .expanded-content p {
+            font-size: 18px;
+            color: #333; /* Dark gray text color */
+        }
+
+        .bold-text {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+    </header>
+    
+    <div class="wrapper">
+        <div class="about-container">
+            <div class="text-container">
+                <h1>Welcome to Visionary Solutions</h1>
+                <p>At Visionary Solutions, our unwavering dedication lies in sculpting the destiny of your organization through meticulously crafted strategic human resource solutions. Our firm, born from a profound passion for nurturing business prosperity, stands resolutely committed to providing cutting-edge HR services that are intricately tailored to meet the distinctive needs of your organization. We are your trusted partners on the journey to fostering a thriving and sustainable future for your business.</p>
+                <span class="read-more-link" onclick="toggleExpandedContent()">Read More</span>
+                <div class="expanded-content">
+                    <p><strong>Mission Statement:</strong> At Visionary Solutions, our unwavering commitment revolves around the core mission of elevating organizational achievements through meticulously tailored and personalized HR solutions. Our profound dedication drives us to deliver exceptional HR consulting services that empower our esteemed clients to not only attract and retain top-tier talent but also to foster their development. In navigating the intricate landscape of HR challenges, we stand as your reliable partner, ensuring effective solutions and sustainable growth.</p>
+                    <p><strong>Vision Statement:</strong> At Visionary Solutions, we envision ourselves as the preeminent destination for HR excellence, positioning us as the paramount partner for organizations seeking unparalleled HR expertise. Our ambition is to serve as the vanguard, leading the way by establishing new benchmarks within the industry. Through the relentless delivery of innovative and forward-thinking HR solutions, we aspire to catalyze organizational growth, enhance workplace culture, and provide the tools and knowledge that empower businesses to flourish in the ever-evolving landscape of HR. Our commitment is rooted in setting the highest standards, guiding businesses toward a prosperous and sustainable future in the realm of human resources.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleExpandedContent() {
+            var expandedContent = document.querySelector('.expanded-content');
+            var readMoreLink = document.querySelector('.read-more-link');
+
+            if (expandedContent.style.display === 'none' || expandedContent.style.display === '') {
+                expandedContent.style.display = 'block';
+                readMoreLink.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

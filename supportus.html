@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Us | Visionary Solutions</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Black background */
+            color: rgb(218, 32, 32); /* Reddish color */
+        }
+
+        header {
+            background-color: #111; /* Dark gray background */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            color: rgb(218, 32, 32); /* Reddish color */
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+        }
+
+        li {
+            margin-right: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(218, 32, 32); /* Reddish color */
+            font-weight: bold;
+        }
+
+        /* Style the specific "Home" link */
+        .home-link a {
+            color: #fff; /* White color for the "Home" link */
+        }
+
+        /* Support Us Section Styles */
+        .support-us {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #111; /* Dark gray background */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .support-us h1 {
+            font-size: 36px;
+            color: rgb(218, 32, 32); /* Reddish color */
+            margin-bottom: 20px;
+        }
+
+        .support-us p {
+            font-size: 18px;
+            color: #fff; /* White text color */
+            margin-bottom: 30px;
+        }
+
+        .support-options {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .support-option {
+            flex: 1;
+            margin: 0 10px;
+            padding: 20px;
+            background-color: #333; /* Dark gray background */
+            border-radius: 5px;
+        }
+
+        .support-option img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .support-option h2 {
+            font-size: 24px;
+            color: rgb(218, 32, 32); /* Reddish color */
+            margin-bottom: 10px;
+        }
+
+        .support-option p {
+            font-size: 16px;
+            color: #fff; /* White text color */
+            margin-bottom: 20px;
+        }
+
+        .support-option a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgb(218, 32, 32); /* Reddish color */
+            color: #fff; /* White text color */
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .support-option a:hover {
+            background-color: #333; /* Dark gray button color */
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            background-color: #111; /* Dark gray background */
+            color: rgb(218, 32, 32); /* Reddish color */
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        /* QR Code Container Styles */
+        #qrCodeContainer {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #qrCodeImage {
+            max-width: 200px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="vs.png" alt="Visionary Solutions Logo">
+                <h1>Visionary Solutions</h1>
+            </div>
+            <ul>
+                <!-- Add the "home-link" class to style the "Home" link -->
+                <li class="home-link"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="supportus.html">Support Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="support-us">
+        <h1>Support Us</h1>
+        <p>We greatly appreciate your interest in supporting our mission to unlock human potential through innovative HR solutions. Your support allows us to continue providing top-notch services and resources to businesses worldwide.</p>
+        
+        <div class="support-options">
+            <div class="support-option">
+                <img src="donate.png" alt="Donate">
+                <h2>Make a Donation</h2>
+                <p>Your contribution helps us fund HR development programs and provide free resources to businesses in need. Every little bit counts!</p>
+                <a href="javascript:void(0);" id="donateButton" class="donate-btn">Donate Now</a>
+            </div>
+            
+            <div class="support-option">
+                <img src="partner.png" alt="Partner">
+                <h2>Become a Partner</h2>
+                <p>Partner with us to bring innovative HR solutions to more businesses. Collaborate on projects, share expertise, and grow together.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- QR Code Container -->
+    <div id="qrCodeContainer">
+        <img id="qrCodeImage" src="" alt="QR Code">
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Visionary Solutions. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript to generate QR code on button click -->
+    <script>
+        document.getElementById("donateButton").addEventListener("click", function() {
+            // URL for donation (replace with your donation URL)
+            var donationUrl = "https://example.com/donate";
+
+            // Create a QR code with the donation URL
+            var qrCodeUrl = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent(donationUrl);
+
+            // Display the QR code
+            var qrCodeContainer = document.getElementById("qrCodeContainer");
+            var qrCodeImage = document.getElementById("qrCodeImage");
+            qrCodeImage.src = qrCodeUrl;
+            qrCodeContainer.style.display = "block";
+        });
+    </script>
+</body>
+</html>
